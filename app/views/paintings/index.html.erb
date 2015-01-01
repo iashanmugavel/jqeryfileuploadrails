@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Paintings</h1>
+
+<div id="paintings">
+<%= render @paintings %>
+</div>
+<div class="clear"></div>
+<%= form_for Painting.new do |f| %>
+<%= f.label :image, "Upload paintings:" %>
+<%= f.file_field :image, multiple: true, name: "painting[image]" %>
+<% end %>
+<br>
+
+<%= link_to 'New Painting', new_painting_path %>

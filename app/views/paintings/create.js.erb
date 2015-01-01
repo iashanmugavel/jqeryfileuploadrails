@@ -1,0 +1,7 @@
+
+<% if @painting.new_record? %>
+alert("Failed to upload painting: <%= j @painting.errors.full_messages.join(', ').html_safe %>");
+<% else %>
+consloe.log("dddddddddd");
+$("#paintings").append("<%= j render(@painting) %>");
+<% end %>
